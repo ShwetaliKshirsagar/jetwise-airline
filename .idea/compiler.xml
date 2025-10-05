@@ -6,7 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="flight-service" />
+=======
+>>>>>>> ece875005c57d4bc69606c36a9962f408bda4aa0
       </profile>
       <profile name="Annotation profile for jetwise-airline" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />

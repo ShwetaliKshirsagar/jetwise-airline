@@ -1,5 +1,6 @@
 package com.jetwise_airline.flight_service.entity;
 
+<<<<<<< HEAD
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
@@ -55,4 +56,7 @@ public class FlightEntity {
     public Integer getCapacity() { return capacity; }
 
     public void setCapacity(Integer capacity) { this.capacity = capacity; }
+=======
+public class FlightEntity {
+>>>>>>> ece875005c57d4bc69606c36a9962f408bda4aa0
 }

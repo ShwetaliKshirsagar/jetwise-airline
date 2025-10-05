@@ -50,18 +50,18 @@ public class FlightServiceImpl implements FlightService{
         //Update timings only if not null and Changed
         if(flightRequest.getDepartureTime()!= null && !flightRequest.getDepartureTime().equals(existingFlight.get().getDepartureTime())){
             if(flightRequest.getArrivalTime().isBefore(flightRequest.getDepartureTime())){
-                throw new Exception("Arrival Time cannot be before departure time");      }
+                throw new RuntimeException("Arrival Time cannot be before departure time");      }
             existingFlight.get().setDepartureTime(flightRequest.getDepartureTime());
         }
         if(flightRequest.getArrivalTime()!= null && !flightRequest.getArrivalTime().equals(existingFlight.get().getArrivalTime())){
             if(flightRequest.getArrivalTime().isBefore(flightRequest.getDepartureTime())){
-                throw new Exception("Arrival Time cannot be before departure time");      }
+                throw new RuntimeException("Arrival Time cannot be before departure time");      }
             existingFlight.get().setArrivalTime(flightRequest.getArrivalTime());
         }
 
         //Seats handling
         if(flightRequest.getCapacity()<existingFlight.get().getCapacity()) {
-            throw new Exception("Cannot reduce seat capacity after publishing flight.");
+            throw new RuntimeException("Cannot reduce seat capacity after publishing flight.");
         }else{
             existingFlight.get().setCapacity(flightRequest.getCapacity());
         }

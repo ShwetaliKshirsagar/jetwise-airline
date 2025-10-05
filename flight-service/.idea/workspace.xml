@@ -4,17 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0be77636-d793-4c17-a6b5-017fd29d149b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jetwise_airline/flight_service/entity/FlightEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jetwise_airline/flight_service/entity/FlightEntity.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="0be77636-d793-4c17-a6b5-017fd29d149b" name="Changes" comment="" />
+>>>>>>> ece875005c57d4bc69606c36a9962f408bda4aa0
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+=======
+>>>>>>> ece875005c57d4bc69606c36a9962f408bda4aa0
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>

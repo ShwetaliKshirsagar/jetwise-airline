@@ -16,7 +16,6 @@
       <change afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/exceptions/FlightNotFoundException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/repository/FlightRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/service/FlightService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/service/FlightServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/jetwise-airline.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
@@ -24,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/flight-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/entity/FlightEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/entity/FlightEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/service/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/service/FlightServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise/airline/user_service/exceptions/ExeceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise/airline/user_service/exceptions/ExceptionHandling.java" afterDir="false" />
