@@ -2,7 +2,6 @@ package com.jetwise.airline.user_service.entity;
 
 import com.jetwise.airline.user_service.enums.Role;
 import jakarta.persistence.*;
-import lombok.*;
 
 @Entity
 @Table(name="users")

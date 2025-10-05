@@ -39,7 +39,7 @@ public class ExceptionHandling {
         HashMap<String, Object> error = new HashMap<>();
         error.put("status", HttpStatus.BAD_REQUEST.value());
         error.put("timestamp", LocalDateTime.now());
-        error.put("error", "User Already Exists");
+        error.put("error", ex.getCause());
         error.put("message", ex.getMessage());
 
         return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);    }

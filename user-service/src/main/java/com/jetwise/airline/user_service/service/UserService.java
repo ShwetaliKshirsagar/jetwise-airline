@@ -10,6 +10,6 @@ import com.jetwise.airline.user_service.repository.UserRepository;
 
 public interface UserService {
     UserResponse register(RegisterUser registerUser) throws UserAlreadyExistsException;
-    UserResponse login(LoginUser loginUser) throws InvalidCredentialsException;
+    String login(LoginUser loginUser) throws InvalidCredentialsException;
 
 }
