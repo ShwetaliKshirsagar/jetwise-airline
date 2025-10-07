@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="flight-service" />
+        <module name="untitled" />
       </profile>
       <profile name="Annotation profile for jetwise-airline" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -19,9 +20,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="flight-service" target="17" />
-      <module name="jetwise-airline" target="1.5" />
-      <module name="user-service" target="17" />
+      <module name="jwt-common" target="18" />
+      <module name="untitled" target="18" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

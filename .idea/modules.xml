@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/flight-service/flight-service.iml" filepath="$PROJECT_DIR$/flight-service/flight-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jetwise-airline.iml" filepath="$PROJECT_DIR$/jetwise-airline.iml" />
-      <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled.iml" filepath="$PROJECT_DIR$/untitled.iml" />
     </modules>
   </component>
 </project>

@@ -4,6 +4,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Service;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,9 +24,10 @@ public class JwtService {
 
     }
         public String extractUsername(String token) {
-            return Jwts.parser()
-                    .setSigningKey(SECRET_KEY)
-                    .parseClaimsJws(token)
+            return Jwts.parserBuilder()
+                    .setSigningKey(SECRET_KEY.getBytes(StandardCharsets.UTF_8))
+                    .build()
+                    .parseClaimsJwt(token)
                     .getBody()
                     .getSubject();
         }
@@ -36,9 +38,10 @@ public class JwtService {
         }
 
         private boolean isTokenExpired(String token) {
-            return Jwts.parser()
-                    .setSigningKey(SECRET_KEY)
-                    .parseClaimsJws(token)
+            return Jwts.parserBuilder()
+                    .setSigningKey(SECRET_KEY.getBytes(StandardCharsets.UTF_8))
+                    .build()
+                    .parseClaimsJwt(token)
                     .getBody()
                     .getExpiration()
                     .before(new Date());
