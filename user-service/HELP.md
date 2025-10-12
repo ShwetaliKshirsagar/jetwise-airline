@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.jetwise.airline.user-service' is invalid and this project uses 'com.jetwise.airline.user_service' instead.
+* The original package name 'com.jetwise_airline.user-service' is invalid and this project uses 'com.jetwise_airline.user_service' instead.
 
 # Getting Started
 

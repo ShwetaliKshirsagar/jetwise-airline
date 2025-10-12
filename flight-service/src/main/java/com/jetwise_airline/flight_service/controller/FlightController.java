@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class FlightController {
 
     //Add Flight
     @PostMapping("/add")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<String> addFlight(@RequestBody FlightRequestDTO flightRequest) {
         flightService.addFlight(flightRequest);
         return new ResponseEntity<>("Flight added successfully", HttpStatus.CREATED);
@@ -26,6 +28,7 @@ public class FlightController {
 
     // Update Flight
     @PutMapping("/update")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<FlightResponseDTO> updateFlight(@RequestBody @Valid FlightRequestDTO flightRequest)
             throws Exception {
         FlightResponseDTO updated = flightService.updateFlight(flightRequest);
@@ -34,6 +37,7 @@ public class FlightController {
 
     //  Delete Flight
     @DeleteMapping("/{flightNumber}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<String> deleteFlight(@PathVariable String flightNumber) {
         flightService.deleteFlight(flightNumber);
         return ResponseEntity.ok("Flight deleted successfully");

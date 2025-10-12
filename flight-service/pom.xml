@@ -79,6 +79,12 @@
 		<version>0.11.5</version>
 		<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.jetwise-airline</groupId>
+			<artifactId>jwt-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
