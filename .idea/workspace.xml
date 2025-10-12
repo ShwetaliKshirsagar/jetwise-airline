@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="">
+    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="added jwt service as dependency  in user and flight microservices">
       <change afterPath="$PROJECT_DIR$/jwt-common/src/main/java/com/jetwise_airline/jwt_common/JWTService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/jwt-common/src/main/java/com/jetwise_airline/jwt_common/JwtAuthorizationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
@@ -247,6 +247,14 @@
       <option name="presentableId" value="Default" />
       <updated>1759575260702</updated>
     </task>
+    <task id="LOCAL-00001" summary="added jwt service as dependency  in user and flight microservices">
+      <created>1760306257104</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760306257104</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +270,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="added jwt service as dependency in in user and flight microservices" />
+    <MESSAGE value="added jwt service as dependency  in user and flight microservices" />
+    <option name="LAST_COMMIT_MESSAGE" value="added jwt service as dependency  in user and flight microservices" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jetwise_airline$UserServiceApplication.ic" NAME="UserServiceApplication Coverage Results" MODIFIED="1759699946433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
