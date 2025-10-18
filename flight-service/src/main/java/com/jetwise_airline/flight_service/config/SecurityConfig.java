@@ -24,8 +24,9 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())   // Disable CSRF for Postman testing
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/flights/**").permitAll() // Public routes
-                        .anyRequest().authenticated()   // Allow all requests
-                ).addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class)
+//                        .anyRequest().authenticated()   // Allow all requests
+                )
+//                .addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
         return filterChain;
     }

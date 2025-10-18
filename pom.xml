@@ -18,7 +18,7 @@
         <module>user-service</module>
         <module>flight-service</module>
         <module>jwt-common</module>
-        <!--        <module>booking-service</module>-->
+        <module>booking-service</module>
     </modules>
 
     <properties>

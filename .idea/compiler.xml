@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jwt-common" />
         <module name="flight-service" />
+        <module name="booking-service" />
       </profile>
       <profile name="Annotation profile for jetwise-airline" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -20,11 +21,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jwt_common" target="17" />
       <module name="untitled" target="18" />
+      <module name="user_service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="booking-service" options="-parameters" />
       <module name="flight-service" options="-parameters" />
       <module name="jwt-common" options="-parameters" />
       <module name="user-service" options="-parameters" />
