@@ -2,13 +2,15 @@ package com.jetwise_airline.booking_service.entity;
 
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
 @Table(name = "Booking")
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name="booking")
-    private long bookingId;
+    @Column(name="bookingId")
+    private UUID bookingId;
     @Column(name="status")
     private String bookingStatus;
     @Column(name="bookedseats")
@@ -16,11 +18,11 @@ public class Booking {
     @Column(name="flightid")
     private long flightId;
 
-    public long getBookingId() {
+    public UUID getBookingId() {
         return bookingId;
     }
 
-    public void setBookingId(long bookingId) {
+    public void setBookingId(UUID bookingId) {
         this.bookingId = bookingId;
     }
 

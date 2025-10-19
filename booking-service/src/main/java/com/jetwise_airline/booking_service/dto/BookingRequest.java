@@ -1,6 +1,8 @@
 package com.jetwise_airline.booking_service.dto;
 
 
+import com.jetwise_airline.booking_service.entity.Booking;
+
 public class BookingRequest {
     private int selectedSeats;
     private long flightId;
@@ -28,6 +30,13 @@ public class BookingRequest {
 
     public void setEmailId(String emailId) {
         this.emailId = emailId;
+    }
+
+    public static Booking fromDtotoEntity(BookingRequest bookingRequest){
+        Booking booking = new Booking();
+        booking.setFlightId(bookingRequest.getFlightId());
+        booking.setSelectedSeats(bookingRequest.getSelectedSeats());
+        return booking;
     }
 
 }
