@@ -9,8 +9,8 @@ import java.util.UUID;
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name="bookingId")
-    private UUID bookingId;
+    @Column(name="bookingId", length=36)
+    private String bookingId;
     @Column(name="status")
     private String bookingStatus;
     @Column(name="bookedseats")
@@ -18,11 +18,11 @@ public class Booking {
     @Column(name="flightid")
     private long flightId;
 
-    public UUID getBookingId() {
+    public String getBookingId() {
         return bookingId;
     }
 
-    public void setBookingId(UUID bookingId) {
+    public void setBookingId(String bookingId) {
         this.bookingId = bookingId;
     }
 

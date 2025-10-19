@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="added getFlightById Rest Api">
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/controller/BookingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/dto/FlightDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/exception/SeatsUnvailableException.java" afterDir="false" />
+    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="added createBooking service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/dto/BookingRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/dto/BookingRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/entity/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/entity/Booking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/repository/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/repository/BookingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1760872669602</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added createBooking service">
+      <created>1760877633861</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760877633861</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,7 +214,8 @@
     <MESSAGE value="added booking-service project structure" />
     <MESSAGE value="added create booking service and flightbookingrespose to get flight details by id." />
     <MESSAGE value="added getFlightById Rest Api" />
-    <option name="LAST_COMMIT_MESSAGE" value="added getFlightById Rest Api" />
+    <MESSAGE value="added createBooking service" />
+    <option name="LAST_COMMIT_MESSAGE" value="added createBooking service" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jetwise_airline$UserServiceApplication.ic" NAME="UserServiceApplication Coverage Results" MODIFIED="1759699946433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
