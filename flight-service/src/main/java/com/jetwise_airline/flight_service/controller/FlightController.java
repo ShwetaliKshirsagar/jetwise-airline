@@ -1,5 +1,6 @@
 package com.jetwise_airline.flight_service.controller;
 
+import com.jetwise_airline.flight_service.dto.FlightBookingResponse;
 import com.jetwise_airline.flight_service.dto.FlightRequestDTO;
 import com.jetwise_airline.flight_service.dto.FlightResponseDTO;
 import com.jetwise_airline.flight_service.service.FlightServiceImpl;
@@ -50,6 +51,13 @@ public class FlightController {
             @RequestParam String destination) {
         List<FlightResponseDTO> flights = flightService.searchFlights(source, destination);
         return ResponseEntity.ok(flights);
+    }
+    //Get flight details for booking
+    @GetMapping("/getFlight/{flightId}")
+    public ResponseEntity<FlightBookingResponse> getFlightById(
+          @PathVariable long flightId) {
+        FlightBookingResponse flightById = flightService.getFlightById(flightId);
+        return ResponseEntity.ok(flightById);
     }
 }
 
