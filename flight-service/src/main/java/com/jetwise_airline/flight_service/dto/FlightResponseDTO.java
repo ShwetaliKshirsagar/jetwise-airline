@@ -12,6 +12,15 @@ public class FlightResponseDTO {
     private LocalDateTime departureTime;
     private LocalDateTime arrivalTime;
     private int capacity;
+    private double price;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public Long getId() {
         return id;
@@ -82,6 +91,7 @@ public class FlightResponseDTO {
         dto.setDestination(entity.getDestination());
         dto.setArrivalTime(entity.getArrivalTime());
         dto.setCapacity(entity.getCapacity());
+        dto.setPrice(entity.getPrice());
         return dto;
     }
 

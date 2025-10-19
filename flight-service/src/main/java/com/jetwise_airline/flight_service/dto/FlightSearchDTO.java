@@ -9,6 +9,15 @@ public class FlightSearchDTO {
     private LocalDateTime departureTime;
     private LocalDateTime arrivalTime;
     private int capacity;
+    private double price;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public String getFlightNumber() {
         return flightNumber;

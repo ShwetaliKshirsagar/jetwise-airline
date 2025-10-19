@@ -7,6 +7,17 @@ public class FlightBookingResponse {
     private String flightNumber;
     private int capacity;
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    private double price;
+
+
     public Long getId() {
         return id;
     }
