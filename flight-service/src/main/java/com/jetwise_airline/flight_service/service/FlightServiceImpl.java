@@ -1,5 +1,6 @@
 package com.jetwise_airline.flight_service.service;
 
+import com.jetwise_airline.flight_service.dto.FlightBookingResponse;
 import com.jetwise_airline.flight_service.dto.FlightRequestDTO;
 import com.jetwise_airline.flight_service.dto.FlightResponseDTO;
 import com.jetwise_airline.flight_service.entity.FlightEntity;
@@ -91,5 +92,16 @@ public class FlightServiceImpl implements FlightService{
 
 
         return flightResponseDTOList;
+    }
+
+    @Override
+    public FlightBookingResponse getFlightById(Long flightId) throws FlightNotFoundException {
+        FlightEntity flightEntity = flightRepository.findById(flightId)
+                .orElseThrow(() -> new FlightNotFoundException("FLIGHT.NOT.FOUND"));
+        FlightBookingResponse flightResponseDTO = new FlightBookingResponse();
+        flightResponseDTO.setId(flightEntity.getId());
+        flightResponseDTO.setFlightNumber(flightEntity.getFlightNumber());
+        flightResponseDTO.setCapacity(flightEntity.getCapacity());
+        return flightResponseDTO;
     }
 }
