@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="added createBooking rest api">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="added price instance for booking service">
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/client/BookingClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/controller/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/dto/BookingResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/dto/PaymentRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/entity/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/repository/PaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/service/PaymentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightBookingResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightBookingResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightSearchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightSearchDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/entity/FlightEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/entity/FlightEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/dto/BookingResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/dto/BookingPaymentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/PaymentServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +56,9 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -71,6 +78,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jetwise_airline.payment_service.dto" />
       <recent name="com.jetwise_airline.booking_service.exception" />
       <recent name="com.jetwise_airline.booking_service.dto" />
       <recent name="com.jetwise_airline.flight_service.dto" />
@@ -90,7 +98,7 @@
       <command value="mvn clean  spring-boot: site:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BookingServiceApplication">
+  <component name="RunManager" selected="Application.PaymentServiceApplication">
     <configuration name="BookingServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.booking_service.BookingServiceApplication" />
       <module name="booking-service" />
@@ -130,6 +138,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PaymentServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.payment_service.PaymentServiceApplication" />
+      <module name="payment-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetwise_airline.payment_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="com.jetwise_airline.user_service.UserServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.user_service.UserServiceApplication" />
       <module name="user-service" />
@@ -147,10 +168,12 @@
       <item itemvalue="Application.FlightServiceApplication" />
       <item itemvalue="Application.com.jetwise_airline.user_service.UserServiceApplication" />
       <item itemvalue="Application.BookingServiceApplication" />
+      <item itemvalue="Application.PaymentServiceApplication" />
       <item itemvalue="Application.JwtCommonApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PaymentServiceApplication" />
         <item itemvalue="Application.BookingServiceApplication" />
         <item itemvalue="Application.JwtCommonApplication" />
       </list>
@@ -207,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1760896633012</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added price instance for booking service">
+      <created>1760898697123</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1760898697123</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,7 +258,8 @@
     <MESSAGE value="added getFlightById Rest Api" />
     <MESSAGE value="added createBooking service" />
     <MESSAGE value="added createBooking rest api" />
-    <option name="LAST_COMMIT_MESSAGE" value="added createBooking rest api" />
+    <MESSAGE value="added price instance for booking service" />
+    <option name="LAST_COMMIT_MESSAGE" value="added price instance for booking service" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jetwise_airline$UserServiceApplication.ic" NAME="UserServiceApplication Coverage Results" MODIFIED="1759699946433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

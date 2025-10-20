@@ -1,7 +1,7 @@
 package com.jetwise_airline.booking_service.service;
 
+import com.jetwise_airline.booking_service.dto.BookingPaymentResponse;
 import com.jetwise_airline.booking_service.dto.BookingRequest;
-import com.jetwise_airline.booking_service.dto.BookingResponse;
 import com.jetwise_airline.booking_service.dto.FlightDTO;
 import com.jetwise_airline.booking_service.entity.Booking;
 import com.jetwise_airline.booking_service.exception.SeatsUnvailableException;
@@ -17,7 +17,7 @@ public class BookingServiceImpl implements BookingService {
     @Autowired
     private RestTemplate restTemplate;
     @Override
-    public void createBooking(BookingRequest bookingRequest) throws SeatsUnvailableException{
+    public void createBooking(BookingRequest bookingRequest) {
         FlightDTO flight = restTemplate.getForObject("http://localhost:8082/api/flights/getFlight/" + bookingRequest.getFlightId(), FlightDTO.class);
         if(flight.getCapacity()<bookingRequest.getSelectedSeats()){
             throw new SeatsUnvailableException("NO.SEATS.AVAILABLE");
@@ -28,5 +28,19 @@ public class BookingServiceImpl implements BookingService {
             booking.setEmailId("dummy@gmail.com");// this need to extract from token
             bookingRepository.save(booking);
         }
+    }
+    @Override
+    public BookingPaymentResponse getBookingDetails(String bookingId){
+        Booking booking = bookingRepository.findById(bookingId)
+                .orElseThrow(() -> new RuntimeException("BOOKING.NOT.FOUND"));
+        BookingPaymentResponse bookingPaymentResponse = BookingPaymentResponse.fromEntityToDTO(booking);
+        return bookingPaymentResponse;
+    }
+    @Override
+    public void updateBookingStatus(String bookingId, String status){
+        Booking booking = bookingRepository.findById(bookingId)
+                .orElseThrow(() -> new RuntimeException("BOOKING.NOT.FOUND"));
+        booking.setBookingStatus(status);
+        bookingRepository.save(booking);
     }
 }
