@@ -1,6 +1,6 @@
 package com.jetwise_airline.flight_service.config;
 
-//import com.jetwise_airline.jwt_common.JwtAuthorizationFilter;
+//import jwt_common.JwtAuthorizationFilter;
 //import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

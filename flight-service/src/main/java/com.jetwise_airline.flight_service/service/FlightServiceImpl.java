@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class FlightServiceImpl implements FlightService{
+public class FlightServiceImpl implements FlightService {
     @Autowired
     private FlightRepository flightRepository;
 
@@ -28,7 +28,7 @@ public class FlightServiceImpl implements FlightService{
     }
 
     @Override
-    public FlightResponseDTO updateFlight(FlightRequestDTO flightRequest) throws FlightNotFoundException{
+    public FlightResponseDTO updateFlight(FlightRequestDTO flightRequest) throws FlightNotFoundException {
 
         Optional<FlightEntity> existingFlight = flightRepository.findByFlightNumber(flightRequest.getFlightNumber());
         if(existingFlight.isEmpty()){

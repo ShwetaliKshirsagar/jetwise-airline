@@ -1,7 +1,5 @@
 package com.jetwise_airline.flight_service.dto;
 
-import java.time.LocalDateTime;
-
 public class FlightBookingResponse {
     private Long id;
     private String flightNumber;

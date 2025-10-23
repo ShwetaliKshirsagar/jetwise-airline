@@ -1,6 +1,7 @@
 package com.jetwise_airline.flight_service.entity;
 
 import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
 @Entity

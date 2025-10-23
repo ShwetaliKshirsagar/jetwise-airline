@@ -5,21 +5,96 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="added price instance for booking service">
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/client/BookingClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/controller/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/dto/BookingResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/dto/PaymentRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/entity/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/repository/PaymentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/service/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/service/PaymentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/BookingServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/controller/BookingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/BookingPaymentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/BookingRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/FlightDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/entity/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/exception/SeatsUnvailableException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/repository/BookingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/PaymentServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/client/BookingClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/controller/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/dto/BookingResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/dto/PaymentRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/entity/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/repository/PaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/service/PaymentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/UserServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/config/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/dto/LoginUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/dto/RegisterUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/dto/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/exceptions/ExceptionHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/exceptions/InvalidCredentialsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/exceptions/UserAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/dto/BookingResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/dto/BookingPaymentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/PaymentServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/BookingServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/controller/BookingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/dto/BookingPaymentResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/dto/BookingRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/dto/FlightDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/entity/Booking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/exception/SeatsUnvailableException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/repository/BookingRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/jetwise_airline/booking_service/service/BookingServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/FlightServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/FlightServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightBookingResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightBookingResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/dto/FlightSearchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightSearchDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/entity/FlightEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/entity/FlightEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/exceptions/ExceptionHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/exceptions/ExceptionHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/exceptions/FlightAlreadyExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/exceptions/FlightAlreadyExists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/exceptions/FlightNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/exceptions/FlightNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/repository/FlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/repository/FlightRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/service/FlightService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com/jetwise_airline/flight_service/service/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt-common/src/main/java/com/jetwise_airline/jwt_common/JWTService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt-common/src/main/java/com/jetwise_airline/jwt_common/JwtAuthorizationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt-common/src/main/java/com/jetwise_airline/jwt_common/JwtCommonApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt-common/src/test/java/com/jetwise_airline/jwt_common/JwtCommonApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt-common/src/test/java/jwt_common/jetwise_airline/jwt_common/JwtCommonApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/PaymentServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/client/BookingClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/controller/PaymentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/dto/BookingResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/dto/PaymentRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/entity/Payment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/repository/PaymentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/service/PaymentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/jetwise_airline/payment_service/service/PaymentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/UserServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/config/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/dto/LoginUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/dto/RegisterUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/dto/UserResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/entity/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/enums/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/exceptions/ExceptionHandling.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/exceptions/InvalidCredentialsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/exceptions/UserAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/jetwise_airline/user_service/service/UserServiceImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,26 +131,28 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
+    <option name="showModules" value="false" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/.m2/repository/com/jetwise/airline/jwt-common/1.0.0&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "full.screen.before.presentation.mode": "false",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/hp/jetwise-airline/flight-service/src/main/java/com.jetwise_airline.flight_service",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.jetwise_airline.payment_service.dto" />
@@ -85,7 +162,12 @@
       <recent name="com.jetwise_airline.flight_service.exceptions" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\jetwise-airline\flight-service\src\main\java\com.jetwise_airline.flight_service" />
       <recent name="C:\Users\hp\jetwise-airline\jwt-common" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com" />
+      <recent name="com.jetwise_airline.jwt_common" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -126,11 +208,11 @@
       </method>
     </configuration>
     <configuration name="JwtCommonApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.jwt_common.JwtCommonApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.JwtCommonApplication" />
       <module name="jwt-common" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jetwise_airline.jwt_common.*" />
+          <option name="PATTERN" value="com.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
