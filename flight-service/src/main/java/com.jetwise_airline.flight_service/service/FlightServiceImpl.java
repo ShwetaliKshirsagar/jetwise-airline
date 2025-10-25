@@ -95,13 +95,19 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
-    public FlightBookingResponse getFlightById(Long flightId) throws FlightNotFoundException {
+    public FlightResponseDTO getFlightById(Long flightId) throws FlightNotFoundException {
         FlightEntity flightEntity = flightRepository.findById(flightId)
                 .orElseThrow(() -> new FlightNotFoundException("FLIGHT.NOT.FOUND"));
-        FlightBookingResponse flightResponseDTO = new FlightBookingResponse();
+        FlightResponseDTO flightResponseDTO = new FlightResponseDTO();
         flightResponseDTO.setId(flightEntity.getId());
         flightResponseDTO.setFlightNumber(flightEntity.getFlightNumber());
         flightResponseDTO.setCapacity(flightEntity.getCapacity());
+        flightResponseDTO.setDestination(flightEntity.getDestination());
+        flightResponseDTO.setSource(flightEntity.getSource());
+        flightResponseDTO.setArrivalTime(flightEntity.getArrivalTime());
+        flightResponseDTO.setDepartureTime(flightEntity.getDepartureTime());
+        flightResponseDTO.setPrice(flightEntity.getPrice());
         return flightResponseDTO;
     }
+
 }

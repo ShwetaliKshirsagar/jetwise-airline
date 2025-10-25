@@ -52,11 +52,11 @@ public class FlightController {
         List<FlightResponseDTO> flights = flightService.searchFlights(source, destination);
         return ResponseEntity.ok(flights);
     }
-    //Get flight details for booking
+    //Get flight details for booking, generate ticket
     @GetMapping("/getFlight/{flightId}")
-    public ResponseEntity<FlightBookingResponse> getFlightById(
+    public ResponseEntity<FlightResponseDTO> getFlightById(
           @PathVariable long flightId) {
-        FlightBookingResponse flightById = flightService.getFlightById(flightId);
+        FlightResponseDTO flightById = flightService.getFlightById(flightId);
         return ResponseEntity.ok(flightById);
     }
 }

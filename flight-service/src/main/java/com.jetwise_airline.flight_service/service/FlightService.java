@@ -13,5 +13,5 @@ public interface FlightService {
     FlightResponseDTO updateFlight(FlightRequestDTO flightRequest) throws FlightNotFoundException;
     void deleteFlight(String flightNumber) throws FlightNotFoundException;
     List<FlightResponseDTO> searchFlights(String source, String destination) throws FlightNotFoundException;
-    FlightBookingResponse getFlightById(Long flightId) throws FlightNotFoundException;
+    FlightResponseDTO getFlightById(Long flightId) throws FlightNotFoundException;
 }

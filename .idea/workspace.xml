@@ -4,23 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="Added Model Mapper to avoid boilerplate code">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="added generateTicket method after payment success">
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/client/FlightClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/exception/BookingUnavailbleException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/BookingPaymentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/BookingPaymentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/BookingRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/BookingRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/entity/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/entity/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/BookingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/BookingServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/FlightDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/FlightDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt-common/src/main/java/com.jetwise_airline.jwt_common/JWTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt-common/src/main/java/com.jetwise_airline.jwt_common/JWTService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/dto/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/dto/LoginUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/dto/RegisterUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/dto/RegisterUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/dto/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/dto/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,7 +46,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="33bABE8ovX7vGCiB4phzMu1sVzr" />
   <component name="ProjectLevelVcsManager">
@@ -85,9 +81,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.jetwise_airline.payment_service.dto" />
-      <recent name="com.jetwise_airline.booking_service.exception" />
       <recent name="com.jetwise_airline.booking_service.dto" />
+      <recent name="com.jetwise_airline.booking_service.exception" />
+      <recent name="com.jetwise_airline.payment_service.dto" />
       <recent name="com.jetwise_airline.flight_service.dto" />
       <recent name="com.jetwise_airline.flight_service.exceptions" />
     </key>
@@ -111,7 +107,7 @@
       <command value="mvn --stop" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BookingServiceApplication">
+  <component name="RunManager" selected="Application.FlightServiceApplication">
     <configuration name="BookingServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.booking_service.BookingServiceApplication" />
       <module name="booking-service" />
@@ -271,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1761380938280</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added modelMapper and lombok">
+      <created>1761393041494</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1761393041494</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,7 +298,9 @@
     <MESSAGE value="added price instance for booking service" />
     <MESSAGE value="corrected package name" />
     <MESSAGE value="Added Model Mapper to avoid boilerplate code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Model Mapper to avoid boilerplate code" />
+    <MESSAGE value="added modelMapper and lombok" />
+    <MESSAGE value="added generateTicket method after payment success" />
+    <option name="LAST_COMMIT_MESSAGE" value="added generateTicket method after payment success" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
