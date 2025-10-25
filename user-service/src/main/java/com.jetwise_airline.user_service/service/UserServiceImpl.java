@@ -9,6 +9,7 @@ import com.jetwise_airline.user_service.enums.Role;
 import com.jetwise_airline.user_service.exceptions.InvalidCredentialsException;
 import com.jetwise_airline.user_service.exceptions.UserAlreadyExistsException;
 import com.jetwise_airline.user_service.repository.UserRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -24,6 +25,8 @@ public class UserServiceImpl implements UserService {
     private PasswordEncoder passwordEncoder;
     @Autowired
     private JWTService jwtService;
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Autowired
     private UserRepository userRepository;
@@ -36,17 +39,11 @@ public class UserServiceImpl implements UserService {
         if (userRepository.findByUserName(registerUser.getUserName()).isPresent()) {
             throw new UserAlreadyExistsException("USER.ALREADY.EXCEPTION");
         }
-        UserEntity newUser = new UserEntity();
-        newUser.setUserName(registerUser.getUserName());
-        newUser.setPassword(passwordEncoder.encode(registerUser.getPassword()));
+        UserEntity newUser = modelMapper.map(registerUser, UserEntity.class);
         newUser.setRole(Role.USER);
 
         UserEntity savedUser = userRepository.save(newUser);
-
-        UserResponse response = new UserResponse();
-        response.setUsername(savedUser.getUserName());
-        response.setRole(savedUser.getRole());
-        return response;
+        return modelMapper.map(savedUser, UserResponse.class);
     }
 
     @Override
@@ -58,9 +55,7 @@ public class UserServiceImpl implements UserService {
             throw new InvalidCredentialsException("INVALID.CREDENTIALS");
         } else {
 
-            String token = jwtService.generateToken(loginUser.getUserName());
-
-            return token;
+            return jwtService.generateToken(loginUser.getUserName());
 
         }
 

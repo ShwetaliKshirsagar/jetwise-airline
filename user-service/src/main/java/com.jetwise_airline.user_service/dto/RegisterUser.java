@@ -12,7 +12,6 @@ public class RegisterUser {
     @Email(message = "Please enter email id.")
     @NotBlank(message = "Please enter username.")
     private String userName;
-
     @NotNull(message = "Please enter password.")
     @NotBlank(message = "Please enter password.")
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$",

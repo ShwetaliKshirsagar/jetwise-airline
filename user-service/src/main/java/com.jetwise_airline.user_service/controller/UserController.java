@@ -1,6 +1,5 @@
 package com.jetwise_airline.user_service.controller;
 
-import com.jetwise_airline.user_service.config.JwtService;
 import com.jetwise_airline.user_service.dto.LoginUser;
 import com.jetwise_airline.user_service.dto.RegisterUser;
 import com.jetwise_airline.user_service.dto.UserResponse;
@@ -19,8 +18,7 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserServiceImpl userService;
-    @Autowired
-    private JwtService jwtService;
+
     @PostMapping("/register")
     public ResponseEntity<UserResponse> registerUser(@Valid @RequestBody RegisterUser registerUser){
         UserResponse registeredUser = userService.register(registerUser);
@@ -36,17 +34,17 @@ public class UserController {
         String token = request.get("token");
         Map<String, Object> response = new HashMap<>();
 
-        try {
-            String username = jwtService.extractUsername(token);
-            boolean isValid = jwtService.isTokenValid(token, username);
+//        try {
+//            String username = jwtService.extractUsername(token);
+//            boolean isValid = jwtService.isTokenValid(token, username);
+//
+//            response.put("valid", isValid);
+//            response.put("username", username);
+//            return ResponseEntity.ok(response);
+//
+//        } catch (Exception e) {
+//            response.put("valid", false);
+//            response.put("error", "Invalid or expired token");
+            return null;        }
 
-            response.put("valid", isValid);
-            response.put("username", username);
-            return ResponseEntity.ok(response);
-
-        } catch (Exception e) {
-            response.put("valid", false);
-            response.put("error", "Invalid or expired token");
-            return new ResponseEntity<>(response,HttpStatus.UNAUTHORIZED);        }
-
-    }}
+    }
