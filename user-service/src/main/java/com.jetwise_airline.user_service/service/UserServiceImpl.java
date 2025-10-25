@@ -38,6 +38,7 @@ public class UserServiceImpl implements UserService {
     public UserResponse register(RegisterUser registerUser) throws UserAlreadyExistsException {
         if (userRepository.findByUserName(registerUser.getUserName()).isPresent()) {
             throw new UserAlreadyExistsException("USER.ALREADY.EXCEPTION");
+
         }
         UserEntity newUser = modelMapper.map(registerUser, UserEntity.class);
         newUser.setRole(Role.USER);
@@ -54,7 +55,6 @@ public class UserServiceImpl implements UserService {
         } else if (!passwordEncoder.matches(loginUser.getPassword(), userEntity.get().getPassword())) {
             throw new InvalidCredentialsException("INVALID.CREDENTIALS");
         } else {
-
             return jwtService.generateToken(loginUser.getUserName());
 
         }

@@ -3,8 +3,11 @@ package com.jetwise_airline.user_service.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
-
+@Getter
+@Setter
 public class LoginUser {
     @NotNull(message = "Please enter username.")
     @Email(message = "Please enter email id.")
@@ -14,19 +17,4 @@ public class LoginUser {
     @NotBlank(message = "Please enter password.")
     private String password;
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
