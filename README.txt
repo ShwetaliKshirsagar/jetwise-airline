@@ -1,62 +1,127 @@
 #Jetwise Airline - Microservices Project
-
-Jetwise Airline is a **Spring Boot microservices-based project** designed for learning and interview preparation.  
-It demonstrates core concepts like **role-based access, service segregation, database integration, validation, exception handling, logging, and JWT authentication**.
-
+Jetwise Airline is a Spring Boot microservices project designed for learning and real-world simulation.
+It demonstrates concepts like role-based access, service segregation, database integration, validation, exception handling, JWT authentication, scheduled jobs, asynchronous processing, and cloud-native features.
 ---
 
 ## Services Overview
 
 Each microservice runs independently with its own database and port.
 
-| Service Name        | Port | Base URL                          | Description                              |
-|---------------------|------|-----------------------------------|------------------------------------------|
-| **user-service**    | 3633 | http://localhost:3633/api/users    | Handles user registration, login, roles, authentication |
-| **flight-service**  | 3634 | http://localhost:3634/api/flights  | Manage flights (search, list, create, update) |
-| **booking-service** | 3635 | http://localhost:3635/api/bookings | Booking management with concurrency handling |
-| **payment-service** | 3636 | http://localhost:3636/api/payments | Payment processing & ticket generation |
+| Service Name        | Port    | Base URL                           | Description                              |
+|---------------------|---------|------------------------------------|------------------------------------------|
+| **user-service**    | 8081    | http://localhost:8081/api/users    | Handles user registration, login, roles, JWT authentication |
+| **flight-service**  | 8082    | http://localhost:8082/api/flights  | Manage flights (search, list, create, update) |
+| **booking-service** | 8083    | http://localhost:8083/api/bookings | Booking creation, pending status handling, scheduled jobs, Ticket generation after payment success |
+| **payment-service** | 8084    | http://localhost:8084/api/payments | Payment processing |
+| **jwt-common**      |(Library)|                -                   | Shared JWT utility dependency for all services |
+
+---
+🗄️ Database: All services use a single MySQL instance with multiple schemas (user-service, flight-service, booking-service, payment-service
+
+---
+
+## JWT-Common Module Overview
+
+The jwt-common project is a shared library that provides reusable JWT-related components for all microservices.
+
+### Purpose:
+To ensure consistent JWT token generation, validation, and claims management across services — reducing code duplication.
+
+
+### Features:
+Common JwtTokenProvider for token creation & validation
+Shared JwtAuthenticationFilter
+JwtUtils for extracting username/roles
+Centralized JWT exception handling
+Added as a Maven dependency in all other microservices
 
 ---
 
 ## Tech Stack
 
-- **Backend**: Java 17, Spring Boot 3.5.6  
-- **Database**: MySQL  
-- **Security**: Spring Security with JWT (to be integrated)  
-- **Tools**: Git, Postman, JUnit5 for testing  
-- **Build Tool**: Maven  
+Language: Java 17
 
+Framework: Spring Boot 3.5.6
+
+Database: MySQL (single DB, multiple schemas)
+
+Security: Spring Security with shared JWT-Common module
+
+Service Discovery: Eureka Server
+
+Gateway: Spring Cloud Gateway
+
+Async/Scheduled: Spring Task (@Async, @Scheduled)
+
+Logging: SLF4J + AOP
+
+Mapping: ModelMapper
+
+Boilerplate Reduction: Lombok
+
+Testing: JUnit5
+
+Containerization: Docker, Docker Compose
+
+Build Tool: Maven
 ---
 
 ##  API Reference
 
 ###  User Service
-- `POST /api/users/register` → Register a new user  
-- `POST /api/users/login` → User login (JWT to be implemented)  
+- `POST /api/users/register` → Register a new user (Done) 
+- `POST /api/users/login` → User login (JWT token generation completed)  
 
 ###  Flight Service
-- `GET /api/flights/search` → Search flights  
-- `POST /api/flights/add` → Add a new flight (Admin only)  
-- `PUT /api/flights/update/{id}` → Update flight details  
+- `GET /api/flights/search` → Search flights (Done) 
+- `POST /api/flights/add` → Add a new flight (Admin only)(ROLE access pending) 
+- `PUT /api/flights/update/{id}` → Update flight details (Admin Only) (ROLE access pending)
+- `DELETE /api/flight/{flightNumber} → Delete flight (Admin Only) (ROLE access pending)
+- `GET ` /api/flights/getFlight/{flightId} → Get flight details for booking, generate ticket (Done)
 
 ###  Booking Service
-- `POST /api/bookings/create` → Create booking  
-- `GET /api/bookings/{id}` → Get booking details  
+- `POST /api/booking/create` → Create booking  (Done)
+- `GET /api/booking/fetch/{bookingid}` → Get booking details  (Done)
+- `PUT /api/booking/update-status/{bookingid}/{status} → Update booking confirmation after payment success.  (Done)
+- `POST /api/booking/generateTicket/{bookingId} → Generate ticket after payment confirmation   (Done)
 
 ###  Payment Service
-- `POST /api/payments/process` → Process payment  
-- `GET /api/payments/status/{id}` → Payment status  
+- `POST /api/payment/process` → Process payment  (Done)
+- `GET /api/payment/status/{id}` → Payment status  (Pending)
 
 ---
 
 ##  Features Implemented
-- ✅ Role-based access (USER, ADMIN)  
-- ✅ Validation & Custom Exceptions  
-- ✅ Centralized Exception Handling with `@ControllerAdvice`  
-- ✅ Database Integration with JPA & MySQL  
-- ✅ DTO-based request/response handling  
-- ✅ Logging (to be added)  
-- 🔜 JWT Authentication for secure communication between services  
 
----
+| Feature                                              | Status      |
+| ---------------------------------------------------- | ----------- |
+| Role-based access (USER, ADMIN)                      | In Progress |
+| Validation & Custom Exceptions                       | Completed   |
+| Centralized Exception Handling (`@ControllerAdvice`) | Completed   |
+| Database Integration with JPA & MySQL                | Completed   |
+| DTO-based request/response mapping using ModelMapper | Completed   |
+| Logging with SLF4J + AOP                             | In Progress |
+| JWT Authentication for secure communication          | In Progress |
+| Scheduled Jobs for pending bookings                  | In Progress |
+| Asynchronous PDF/email generation                    | In Progress |
+| Dockerized microservices with Docker Compose         | Planned     |
+| API Gateway + Eureka Discovery                       | Planned     |
+| Unit & Integration Testing with JUnit5               | Partial     |
+| Kafka Events                                         | Planned     |
+| Swagger API Docs                                     | Planned     |
 
+
+
+##  Architecture & Design
+
+Microservices Architecture: Each service has its own responsibility and schema, can be deployed independently.
+
+API Gateway: Routes incoming requests to respective services.
+
+Service Discovery: Eureka Server enables services to locate each other dynamically.
+
+Asynchronous Tasks: Background tasks for PDF generation and emails.
+
+Scheduled Jobs: Booking service automatically cancels pending bookings after 10 minutes.
+
+Containerization: Each service can be run in Docker for easy deployment and scaling.

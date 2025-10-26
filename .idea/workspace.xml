@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="added generateTicket method after payment success">
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/client/FlightClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/exception/BookingUnavailbleException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/BookingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/BookingServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/FlightDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/dto/FlightDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1761393041494</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added generateTicket method after payment success">
+      <created>1761428807391</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1761428807391</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

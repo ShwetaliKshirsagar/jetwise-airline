@@ -20,7 +20,7 @@ public class FlightController {
     private FlightServiceImpl flightService;
 
     //Add Flight
-    @PostMapping("/add")
+    @PostMapping("add")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<String> addFlight(@RequestBody FlightRequestDTO flightRequest) {
         flightService.addFlight(flightRequest);
@@ -28,7 +28,7 @@ public class FlightController {
     }
 
     // Update Flight
-    @PutMapping("/update")
+    @PutMapping("update")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<FlightResponseDTO> updateFlight(@RequestBody @Valid FlightRequestDTO flightRequest)
             throws Exception {
@@ -37,7 +37,7 @@ public class FlightController {
     }
 
     //  Delete Flight
-    @DeleteMapping("/{flightNumber}")
+    @DeleteMapping("{flightNumber}")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<String> deleteFlight(@PathVariable String flightNumber) {
         flightService.deleteFlight(flightNumber);
@@ -45,7 +45,7 @@ public class FlightController {
     }
 
     //Search Flights
-    @GetMapping("/search")
+    @GetMapping("search")
     public ResponseEntity<List<FlightResponseDTO>> searchFlights(
             @RequestParam String source,
             @RequestParam String destination) {
@@ -53,7 +53,7 @@ public class FlightController {
         return ResponseEntity.ok(flights);
     }
     //Get flight details for booking, generate ticket
-    @GetMapping("/getFlight/{flightId}")
+    @GetMapping("getFlight/{flightId}")
     public ResponseEntity<FlightResponseDTO> getFlightById(
           @PathVariable long flightId) {
         FlightResponseDTO flightById = flightService.getFlightById(flightId);
