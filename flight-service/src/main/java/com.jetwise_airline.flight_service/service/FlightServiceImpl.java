@@ -35,10 +35,6 @@ public class FlightServiceImpl implements FlightService {
             throw new FlightNotFoundException("FLIGHT.NOT.FOUND");
         }
 
-        //Update Flight Number If changed
-        if(flightRequest.getFlightNumber()!= null && !flightRequest.getFlightNumber().equals(existingFlight.get().getFlightNumber())){
-            existingFlight.get().setFlightNumber(flightRequest.getFlightNumber());
-        }
 
         //Update route only if not null and Changed
         if(flightRequest.getSource()!= null && !flightRequest.getSource().equals(existingFlight.get().getSource())){

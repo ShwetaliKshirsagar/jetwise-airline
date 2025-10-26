@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="added generateTicket method after payment success">
+    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="updated progress tracker">
+      <change afterPath="$PROJECT_DIR$/flight-service/src/test/java/com/jetwise_airline/flight_service/service/FlightServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +19,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -59,6 +60,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "full.screen.before.presentation.mode": "false",
     "jdk.selected.JAVA_MODULE": "18",
     "last_opened_file_path": "C:/Users/hp/jetwise-airline/user-service/pom.xml",
@@ -66,7 +69,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Lombok",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "two.files.diff.last.used.file": "C:/Users/hp/jetwise-airline/user-service/pom.xml"
   }
 }]]></component>
@@ -82,9 +85,15 @@
       <recent name="C:\Users\hp\jetwise-airline\flight-service\src\main\java\com.jetwise_airline.flight_service" />
       <recent name="C:\Users\hp\jetwise-airline\jwt-common" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
       <recent name="com.jetwise_airline.jwt_common" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.jetwise_airline.flight_service.service" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -98,52 +107,13 @@
       <command value="mvn --stop" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.FlightServiceApplication">
-    <configuration name="BookingServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.booking_service.BookingServiceApplication" />
-      <module name="booking-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jetwise_airline.booking_service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.FlightServiceImplTest.updateFlightTest">
     <configuration name="FlightServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.FlightServiceApplication" />
       <module name="flight-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.jetwise_airline.flight_service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JwtCommonApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.JwtCommonApplication" />
-      <module name="jwt-common" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PaymentServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.payment_service.PaymentServiceApplication" />
-      <module name="payment-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jetwise_airline.payment_service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,18 +134,101 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FlightServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="flight-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetwise_airline.flight_service.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jetwise_airline.flight_service.service" />
+      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.service.FlightServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightServiceImplTest.addFlightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="flight-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetwise_airline.flight_service.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jetwise_airline.flight_service.service" />
+      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.service.FlightServiceImplTest" />
+      <option name="METHOD_NAME" value="addFlightTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightServiceImplTest.addFlightThrowsFlightNotFoundExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="flight-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetwise_airline.flight_service.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jetwise_airline.flight_service.service" />
+      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.service.FlightServiceImplTest" />
+      <option name="METHOD_NAME" value="addFlightThrowsFlightNotFoundExceptionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightServiceImplTest.updateFlightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="flight-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetwise_airline.flight_service.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jetwise_airline.flight_service.service" />
+      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.service.FlightServiceImplTest" />
+      <option name="METHOD_NAME" value="updateFlightTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightServiceImplTest.updateFlightThrowsExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="flight-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetwise_airline.flight_service.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jetwise_airline.flight_service.service" />
+      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.service.FlightServiceImplTest" />
+      <option name="METHOD_NAME" value="updateFlightThrowsExceptionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.FlightServiceApplication" />
       <item itemvalue="Application.UserServiceApplication" />
-      <item itemvalue="Application.BookingServiceApplication" />
-      <item itemvalue="Application.PaymentServiceApplication" />
-      <item itemvalue="Application.JwtCommonApplication" />
+      <item itemvalue="JUnit.FlightServiceImplTest" />
+      <item itemvalue="JUnit.FlightServiceImplTest.addFlightTest" />
+      <item itemvalue="JUnit.FlightServiceImplTest.addFlightThrowsFlightNotFoundExceptionTest" />
+      <item itemvalue="JUnit.FlightServiceImplTest.updateFlightTest" />
+      <item itemvalue="JUnit.FlightServiceImplTest.updateFlightThrowsExceptionTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BookingServiceApplication" />
-        <item itemvalue="Application.PaymentServiceApplication" />
-        <item itemvalue="Application.JwtCommonApplication" />
+        <item itemvalue="JUnit.FlightServiceImplTest.updateFlightTest" />
+        <item itemvalue="JUnit.FlightServiceImplTest" />
+        <item itemvalue="JUnit.FlightServiceImplTest.updateFlightThrowsExceptionTest" />
+        <item itemvalue="JUnit.FlightServiceImplTest.addFlightThrowsFlightNotFoundExceptionTest" />
+        <item itemvalue="JUnit.FlightServiceImplTest.addFlightTest" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1761428807391</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updated progress tracker">
+      <created>1761474325950</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761474325950</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,15 +358,46 @@
     <MESSAGE value="Added Model Mapper to avoid boilerplate code" />
     <MESSAGE value="added modelMapper and lombok" />
     <MESSAGE value="added generateTicket method after payment success" />
-    <option name="LAST_COMMIT_MESSAGE" value="added generateTicket method after payment success" />
+    <MESSAGE value="updated progress tracker" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated progress tracker" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/flight-service/src/test/java/com/jetwise_airline/flight_service/service/FlightServiceImplTest.java</url>
+          <line>99</line>
+          <properties class="com.jetwise_airline.flight_service.service.FlightServiceImplTest" method="updateFlightThrowsExceptionTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jetwise_airline$FlightServiceImplTest_updateFlightTest.ic" NAME="FlightServiceImplTest.updateFlightTest Coverage Results" MODIFIED="1761509080134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.jetwise_airline.flight_service.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/jetwise_airline$FlightServiceImplTest_addFlightThrowsFlightNotFoundExceptionTest.ic" NAME="FlightServiceImplTest.addFlightThrowsFlightNotFoundExceptionTest Coverage Results" MODIFIED="1761510724041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.jetwise_airline.flight_service.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/jetwise_airline$FlightServiceImplTest.ic" NAME="FlightServiceImplTest Coverage Results" MODIFIED="1761512318075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.jetwise_airline.flight_service.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/jetwise_airline$FlightServiceImplTest_updateFlightThrowsExceptionTest.ic" NAME="FlightServiceImplTest.updateFlightThrowsExceptionTest Coverage Results" MODIFIED="1761511811752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.jetwise_airline.flight_service.service.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/jetwise_airline$BookingServiceApplication.ic" NAME="BookingServiceApplication Coverage Results" MODIFIED="1761390754177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.jetwise_airline.booking_service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/jetwise_airline$FlightServiceImplTest_addFlightTest.ic" NAME="FlightServiceImplTest.addFlightTest Coverage Results" MODIFIED="1761507583929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.jetwise_airline.flight_service.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/jetwise_airline$UserServiceApplication.ic" NAME="UserServiceApplication Coverage Results" MODIFIED="1759699946433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.jetwise.airline.user_service.*</FILTER>
