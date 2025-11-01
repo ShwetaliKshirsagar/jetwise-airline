@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jwt-common" />
         <module name="payment-service" />
+        <module name="service-registry" />
       </profile>
       <profile name="Annotation profile for jetwise-airline" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -18,12 +19,13 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar" />
         </processorPath>
         <module name="flight-service" />
-        <module name="user-service" />
         <module name="booking-service" />
+        <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jwt_common" target="17" />
+      <module name="service-registery" target="17" />
       <module name="untitled" target="18" />
       <module name="user_service" target="17" />
     </bytecodeTargetLevel>
@@ -34,6 +36,8 @@
       <module name="flight-service" options="-parameters" />
       <module name="jwt-common" options="-parameters" />
       <module name="payment-service" options="-parameters" />
+      <module name="service-registery" options="-parameters" />
+      <module name="service-registry" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>

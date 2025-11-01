@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="added test cases for addflight and update flight service.">
-      <change afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/config/AppConfig.java" afterDir="false" />
+    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="flight service test cases">
+      <change afterPath="$PROJECT_DIR$/service-registry/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-registry/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-registry/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-registry/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-registry/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-registry/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-registry/src/main/java/com/jetwise_airline/service_registery/ServiceRegisteryApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-registry/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-registry/src/test/java/com/jetwise_airline/service_registery/ServiceRegisteryApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightBookingResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightBookingResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightSearchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/dto/FlightSearchDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/entity/FlightEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/entity/FlightEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/service/FlightServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-service/src/test/java/com/jetwise_airline/flight_service/service/FlightServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/test/java/com/jetwise_airline/flight_service/service/FlightServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,22 +110,35 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean" />
-      <command value="mvn install" />
       <command value="mvn package" />
       <command value="mvn clean install" />
-      <command value="mvn clean install -U" />
-      <command value="mvn clean  spring-boot: site:run" />
       <command value="mvn --stop" />
       <command value="mvn test" />
+      <command value="mvn install" />
+      <command value="mvn clean  spring-boot: site:run" />
+      <command value="mvn clean install -U" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FlightServiceImplTest">
+  <component name="RunManager" selected="Application.ServiceRegisteryApplication">
     <configuration name="FlightServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.FlightServiceApplication" />
       <module name="flight-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.jetwise_airline.flight_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceRegisteryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.service_registery.ServiceRegisteryApplication" />
+      <module name="service-registry" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetwise_airline.service_registery.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -206,38 +222,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightServiceImplTest.updateFlightThrowsExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="flight-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jetwise_airline.flight_service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jetwise_airline.flight_service.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.service.FlightServiceImplTest" />
-      <option name="METHOD_NAME" value="updateFlightThrowsExceptionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.FlightServiceApplication" />
       <item itemvalue="Application.UserServiceApplication" />
+      <item itemvalue="Application.ServiceRegisteryApplication" />
       <item itemvalue="JUnit.FlightServiceImplTest" />
       <item itemvalue="JUnit.FlightServiceImplTest.addFlightThrowsFlightAlreadyExistsTest" />
       <item itemvalue="JUnit.FlightServiceImplTest.updateFlightTest" />
       <item itemvalue="JUnit.FlightServiceImplTest.updateFlightThrowsCapacityReductionExceptionTest" />
-      <item itemvalue="JUnit.FlightServiceImplTest.updateFlightThrowsExceptionTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ServiceRegisteryApplication" />
         <item itemvalue="JUnit.FlightServiceImplTest" />
         <item itemvalue="JUnit.FlightServiceImplTest.updateFlightTest" />
         <item itemvalue="JUnit.FlightServiceImplTest.updateFlightThrowsCapacityReductionExceptionTest" />
         <item itemvalue="JUnit.FlightServiceImplTest.addFlightThrowsFlightAlreadyExistsTest" />
-        <item itemvalue="JUnit.FlightServiceImplTest.updateFlightThrowsExceptionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -348,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1761512666355</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="flight service test cases">
+      <created>1762007725099</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762007725099</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,7 +383,8 @@
     <MESSAGE value="added generateTicket method after payment success" />
     <MESSAGE value="updated progress tracker" />
     <MESSAGE value="added test cases for addflight and update flight service." />
-    <option name="LAST_COMMIT_MESSAGE" value="added test cases for addflight and update flight service." />
+    <MESSAGE value="flight service test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="flight service test cases" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
