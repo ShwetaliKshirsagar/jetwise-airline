@@ -1,11 +1,15 @@
 package com.jetwise_airline.flight_service.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "FlightDetails")
+@Getter
+@Setter
 public class FlightEntity {
 
     @Id
@@ -31,42 +35,5 @@ public class FlightEntity {
     private int capacity;
     @Column(nullable = false)
     private double price;
-
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Long getId() { return id; }
-
-    public void setId(Long id) { this.id = id; }
-
-    public String getFlightNumber() { return flightNumber; }
-
-    public void setFlightNumber(String flightNumber) { this.flightNumber = flightNumber; }
-
-    public String getSource() { return source; }
-
-    public void setSource(String source) { this.source = source; }
-
-    public String getDestination() { return destination; }
-
-    public void setDestination(String destination) { this.destination = destination; }
-
-    public LocalDateTime getDepartureTime() { return departureTime; }
-
-    public void setDepartureTime(LocalDateTime departureTime) { this.departureTime = departureTime; }
-
-    public LocalDateTime getArrivalTime() { return arrivalTime; }
-
-    public void setArrivalTime(LocalDateTime arrivalTime) { this.arrivalTime = arrivalTime; }
-
-    public Integer getCapacity() { return capacity; }
-
-    public void setCapacity(Integer capacity) { this.capacity = capacity; }
 
 }

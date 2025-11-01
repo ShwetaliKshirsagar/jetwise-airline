@@ -7,6 +7,7 @@ import com.jetwise_airline.flight_service.entity.FlightEntity;
 import com.jetwise_airline.flight_service.exceptions.FlightAlreadyExists;
 import com.jetwise_airline.flight_service.exceptions.FlightNotFoundException;
 import com.jetwise_airline.flight_service.repository.FlightRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,12 +19,14 @@ public class FlightServiceImpl implements FlightService {
     @Autowired
     private FlightRepository flightRepository;
 
+    @Autowired
+    private ModelMapper modelMapper;
     @Override
     public void addFlight(FlightRequestDTO flightRequest) throws FlightAlreadyExists {
       if(flightRepository.findByFlightNumber(flightRequest.getFlightNumber()).isPresent()){
           throw new FlightAlreadyExists("FLIGHT.ALREADY.EXISTS");
       }else{
-         flightRepository.save(FlightRequestDTO.toEntity(flightRequest));
+         flightRepository.save(modelMapper.map(flightRequest,FlightEntity.class));
       }
     }
 
@@ -48,6 +51,7 @@ public class FlightServiceImpl implements FlightService {
         if(flightRequest.getDepartureTime()!= null && !flightRequest.getDepartureTime().equals(existingFlight.get().getDepartureTime())){
             if(flightRequest.getArrivalTime().isBefore(flightRequest.getDepartureTime())){
                 throw new RuntimeException("Arrival Time cannot be before departure time");      }
+
             existingFlight.get().setDepartureTime(flightRequest.getDepartureTime());
         }
         if(flightRequest.getArrivalTime()!= null && !flightRequest.getArrivalTime().equals(existingFlight.get().getArrivalTime())){
@@ -62,9 +66,9 @@ public class FlightServiceImpl implements FlightService {
         }else{
             existingFlight.get().setCapacity(flightRequest.getCapacity());
         }
-        flightRepository.save(existingFlight.get());
+       flightRepository.save(existingFlight.get());
 
-        return FlightResponseDTO.fromEntity(existingFlight.get());
+        return modelMapper.map(existingFlight.get(),FlightResponseDTO.class);
 
     }
 
@@ -83,10 +87,8 @@ public class FlightServiceImpl implements FlightService {
                 .orElseThrow(() -> new FlightNotFoundException("FLIGHT.NOT.FOUND"));
 
         List<FlightResponseDTO> flightResponseDTOList = availableFlights.stream()
-                .map(FlightResponseDTO::fromEntity)
+                .map(flight->modelMapper.map(flight,FlightResponseDTO.class))
                 .toList();
-
-
         return flightResponseDTOList;
     }
 
@@ -94,16 +96,8 @@ public class FlightServiceImpl implements FlightService {
     public FlightResponseDTO getFlightById(Long flightId) throws FlightNotFoundException {
         FlightEntity flightEntity = flightRepository.findById(flightId)
                 .orElseThrow(() -> new FlightNotFoundException("FLIGHT.NOT.FOUND"));
-        FlightResponseDTO flightResponseDTO = new FlightResponseDTO();
-        flightResponseDTO.setId(flightEntity.getId());
-        flightResponseDTO.setFlightNumber(flightEntity.getFlightNumber());
-        flightResponseDTO.setCapacity(flightEntity.getCapacity());
-        flightResponseDTO.setDestination(flightEntity.getDestination());
-        flightResponseDTO.setSource(flightEntity.getSource());
-        flightResponseDTO.setArrivalTime(flightEntity.getArrivalTime());
-        flightResponseDTO.setDepartureTime(flightEntity.getDepartureTime());
-        flightResponseDTO.setPrice(flightEntity.getPrice());
-        return flightResponseDTO;
+        return modelMapper.map(flightEntity, FlightResponseDTO.class);
+
     }
 
 }
