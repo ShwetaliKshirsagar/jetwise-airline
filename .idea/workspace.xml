@@ -4,21 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="flight service test cases">
-      <change afterPath="$PROJECT_DIR$/service-registry/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-registry/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-registry/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-registry/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-registry/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-registry/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-registry/src/main/java/com/jetwise_airline/service_registery/ServiceRegisteryApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-registry/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-registry/src/test/java/com/jetwise_airline/service_registery/ServiceRegisteryApplicationTests.java" afterDir="false" />
+    <list default="true" id="4c701b89-5a98-45fe-a6cc-3f5ddc553444" name="Changes" comment="routed service to 8085 port using api gateway">
+      <change afterPath="$PROJECT_DIR$/api-gateway/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/jetwise_airline/api_gateway/ApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/jetwise_airline/api_gateway/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/jetwise_airline/api_gateway/filter/JWTAuthenticationWebFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/jetwise_airline/api_gateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jetwise-airline.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/BookingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/BookingServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com.jetwise_airline.booking_service/service/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/FlightServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/FlightServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/java/com.jetwise_airline.flight_service/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/flight-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt-common/src/main/java/com.jetwise_airline.jwt_common/JWTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt-common/src/main/java/com.jetwise_airline.jwt_common/JWTService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt-common/src/main/java/com.jetwise_airline.jwt_common/JwtAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt-common/src/main/java/com.jetwise_airline.jwt_common/JwtAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt-common/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jwt-common/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com.jetwise_airline.payment_service/PaymentServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-registry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-registry/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com.jetwise_airline.user_service/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,27 +87,28 @@
     <option name="showModules" value="false" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "LombokPluginIS_LOMBOK_JPS_FIX_ENABLED": "true",
-    "LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "full.screen.before.presentation.mode": "false",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/hp/jetwise-airline/flight-service/pom.xml",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "two.files.diff.last.used.file": "C:/Users/hp/jetwise-airline/flight-service/pom.xml"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;LombokPluginIS_LOMBOK_JPS_FIX_ENABLED&quot;: &quot;true&quot;,
+    &quot;LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/jetwise-airline/flight-service/pom.xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/hp/jetwise-airline/flight-service/pom.xml&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.jetwise_airline.booking_service.dto" />
@@ -119,7 +144,33 @@
       <command value="mvn clean install -U" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.ServiceRegisteryApplication">
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.api_gateway.ApiGatewayApplication" />
+      <module name="api-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetwise_airline.api_gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.booking_service.BookingServiceApplication" />
+      <module name="booking-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetwise_airline.booking_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FlightServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.FlightServiceApplication" />
       <module name="flight-service" />
@@ -133,7 +184,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceRegisteryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="JwtCommonApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.jwt_common.JwtCommonApplication" />
+      <module name="jwt-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jetwise_airline.jwt_common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceRegisteryApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.service_registery.ServiceRegisteryApplication" />
       <module name="service-registry" />
       <extension name="coverage">
@@ -174,22 +238,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightServiceImplTest.addFlightThrowsFlightAlreadyExistsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="flight-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jetwise_airline.flight_service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jetwise_airline.flight_service.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.service.FlightServiceImplTest" />
-      <option name="METHOD_NAME" value="addFlightThrowsFlightAlreadyExistsTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FlightServiceImplTest.updateFlightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="flight-service" />
       <extension name="coverage">
@@ -206,38 +254,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightServiceImplTest.updateFlightThrowsCapacityReductionExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="flight-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jetwise_airline.flight_service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jetwise_airline.flight_service.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jetwise_airline.flight_service.service.FlightServiceImplTest" />
-      <option name="METHOD_NAME" value="updateFlightThrowsCapacityReductionExceptionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.FlightServiceApplication" />
       <item itemvalue="Application.UserServiceApplication" />
+      <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Application.ServiceRegisteryApplication" />
+      <item itemvalue="Application.BookingServiceApplication" />
+      <item itemvalue="Application.JwtCommonApplication" />
       <item itemvalue="JUnit.FlightServiceImplTest" />
-      <item itemvalue="JUnit.FlightServiceImplTest.addFlightThrowsFlightAlreadyExistsTest" />
       <item itemvalue="JUnit.FlightServiceImplTest.updateFlightTest" />
-      <item itemvalue="JUnit.FlightServiceImplTest.updateFlightThrowsCapacityReductionExceptionTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ServiceRegisteryApplication" />
+        <item itemvalue="Application.JwtCommonApplication" />
         <item itemvalue="JUnit.FlightServiceImplTest" />
         <item itemvalue="JUnit.FlightServiceImplTest.updateFlightTest" />
-        <item itemvalue="JUnit.FlightServiceImplTest.updateFlightThrowsCapacityReductionExceptionTest" />
-        <item itemvalue="JUnit.FlightServiceImplTest.addFlightThrowsFlightAlreadyExistsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -355,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1762007725099</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added service registry">
+      <created>1762025146117</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1762025146117</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -384,9 +422,20 @@
     <MESSAGE value="updated progress tracker" />
     <MESSAGE value="added test cases for addflight and update flight service." />
     <MESSAGE value="flight service test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="flight service test cases" />
+    <MESSAGE value="added service registry" />
+    <MESSAGE value="routed service to 8085 port using api gateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="routed service to 8085 port using api gateway" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-registry/src/main/java/com/jetwise_airline/service_registery/ServiceRegisteryApplication.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.util.Optional" memberName="value" />

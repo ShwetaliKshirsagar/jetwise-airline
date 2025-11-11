@@ -18,7 +18,7 @@ public class BookingController {
     @Autowired
     private BookingServiceImpl bookingService;
     @PostMapping("create")
-    public ResponseEntity<String> creatBooking(@RequestBody BookingRequest bookingRequest) {
+    public ResponseEntity<String> createBooking(@RequestBody BookingRequest bookingRequest) {
         bookingService.createBooking(bookingRequest);
         return new ResponseEntity<>("Please proceed for payment to confirm booking", HttpStatus.CREATED);
     }

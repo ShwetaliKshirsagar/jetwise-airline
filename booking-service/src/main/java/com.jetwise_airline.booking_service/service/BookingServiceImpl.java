@@ -34,7 +34,7 @@ public class BookingServiceImpl implements BookingService {
     private FlightClient flightClient;
     @Override
     public void createBooking(BookingRequest bookingRequest) {
-        FlightDTO flight = restTemplate.getForObject("http://localhost:8082/api/flights/getFlight/" + bookingRequest.getFlightId(), FlightDTO.class);
+        FlightDTO flight = restTemplate.getForObject("http://localhost:8082/flights/getFlight/" + bookingRequest.getFlightId(), FlightDTO.class);
         if(flight.getCapacity()<bookingRequest.getSelectedSeats()){
             throw new SeatsUnvailableException("NO.SEATS.AVAILABLE");
         }
@@ -78,7 +78,7 @@ public class BookingServiceImpl implements BookingService {
         title.setSpacingAfter(20);
         document.add(title);
 
-        // Ticket details in a table
+        // Ticket details
         PdfPTable table = new PdfPTable(2);
         table.setWidthPercentage(100);
         table.setSpacingBefore(10f);
@@ -101,7 +101,7 @@ public class BookingServiceImpl implements BookingService {
 
         document.add(table);
 
-        // Footer / airline signature
+        // Footer
         Paragraph footer = new Paragraph("Have a safe journey!\nJetWise Airlines", new Font(Font.FontFamily.HELVETICA, 10, Font.ITALIC, BaseColor.GRAY));
         footer.setAlignment(Element.ALIGN_CENTER);
         footer.setSpacingBefore(30);
