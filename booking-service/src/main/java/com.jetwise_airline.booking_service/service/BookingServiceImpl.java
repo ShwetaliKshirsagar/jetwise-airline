@@ -21,6 +21,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class BookingServiceImpl implements BookingService {
@@ -32,6 +35,10 @@ public class BookingServiceImpl implements BookingService {
     private ModelMapper modelMapper;
     @Autowired
     private FlightClient flightClient;
+
+    public BookingServiceImpl() {
+    }
+
     @Override
     public void createBooking(BookingRequest bookingRequest) {
         FlightDTO flight = restTemplate.getForObject("http://localhost:8082/flights/getFlight/" + bookingRequest.getFlightId(), FlightDTO.class);
@@ -108,6 +115,8 @@ public class BookingServiceImpl implements BookingService {
         document.add(footer);
         document.close();
     }
+
+
     private void addRow(PdfPTable table, String label, String value, Font labelFont, Font valueFont) {
         PdfPCell cell1 = new PdfPCell(new Phrase(label, labelFont));
         cell1.setBorder(Rectangle.NO_BORDER);
@@ -120,4 +129,28 @@ public class BookingServiceImpl implements BookingService {
         table.addCell(cell1);
         table.addCell(cell2);
     }
+
+    @Override
+    public void updateBookingStatusCancel(List<String> bookings) {
+        List<Booking> availableBookings = bookingRepository.findAllById(bookings);
+
+        if(bookings.size()!=availableBookings.size()){
+
+            Set<String> foundIds = availableBookings.stream()
+                    .map(Booking::getBookingId)
+                    .collect(Collectors.toSet());
+
+            Set<String> missingIds = bookings.stream()
+                    .filter(id-> !foundIds.contains(id))
+                    .collect(Collectors.toSet());
+
+            throw new BookingUnavailbleException(missingIds);
+        }
+
+
+
+        bookingRepository.updateAllStatusCancel(bookings);
+    }
+
+
 }

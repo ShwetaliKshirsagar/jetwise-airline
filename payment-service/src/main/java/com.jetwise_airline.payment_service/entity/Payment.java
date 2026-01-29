@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Entity
 @RequestMapping("api/payment")
-@Table(name="payment-details")
+@Table(name="payment")
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

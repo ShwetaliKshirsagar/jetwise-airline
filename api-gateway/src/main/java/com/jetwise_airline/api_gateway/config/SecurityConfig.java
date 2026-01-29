@@ -14,7 +14,6 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 public class SecurityConfig {
 @Autowired
     private JWTAuthenticationWebFilter jwtFilter;
-
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
 
@@ -27,5 +26,7 @@ public class SecurityConfig {
 
         return http.build();
     }
+
+
 
 }

@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.FileNotFoundException;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/booking")
@@ -36,5 +37,11 @@ public class BookingController {
     public ResponseEntity<Void> generateTicket(@PathVariable String bookingId) throws DocumentException, FileNotFoundException {
         bookingService.generateTicket(bookingId);
         return ResponseEntity.ok().build();
+    }
+
+    @PutMapping("/update/cancel")
+    public ResponseEntity<String> updateBookingStatusCancel(@RequestBody List<String> bookings){
+        bookingService.updateBookingStatusCancel(bookings);
+        return new ResponseEntity<>("UPDATED.BOOKING.STATUS.CANCEL",HttpStatus.OK);
     }
 }

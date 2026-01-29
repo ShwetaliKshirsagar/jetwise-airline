@@ -7,6 +7,7 @@ import com.jetwise_airline.booking_service.exception.BookingUnavailbleException;
 import com.jetwise_airline.booking_service.exception.SeatsUnvailableException;
 
 import java.io.FileNotFoundException;
+import java.util.List;
 
 public interface BookingService {
     void createBooking(BookingRequest bookingRequest) throws SeatsUnvailableException;
@@ -17,4 +18,5 @@ public interface BookingService {
 
     void generateTicket(String bookingId) throws BookingUnavailbleException, FileNotFoundException, DocumentException;
 
+    void updateBookingStatusCancel(List<String> bookings);
 }
