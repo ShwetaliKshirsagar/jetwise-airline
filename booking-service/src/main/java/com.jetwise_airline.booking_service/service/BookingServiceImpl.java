@@ -12,8 +12,8 @@ import com.jetwise_airline.booking_service.entity.Booking;
 import com.jetwise_airline.booking_service.exception.BookingUnavailbleException;
 import com.jetwise_airline.booking_service.exception.SeatsUnvailableException;
 import com.jetwise_airline.booking_service.repository.BookingRepository;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -26,22 +26,19 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class BookingServiceImpl implements BookingService {
-    @Autowired
-    private BookingRepository bookingRepository;
-    @Autowired
-    private RestTemplate restTemplate;
-    @Autowired
-    private ModelMapper modelMapper;
-    @Autowired
-    private FlightClient flightClient;
 
-    public BookingServiceImpl() {
-    }
+    private final BookingRepository bookingRepository;
+    private final RestTemplate restTemplate;
+    private final ModelMapper modelMapper;
+    private final FlightClient flightClient;
+
 
     @Override
     public void createBooking(BookingRequest bookingRequest) {
         FlightDTO flight = restTemplate.getForObject("http://localhost:8082/flights/getFlight/" + bookingRequest.getFlightId(), FlightDTO.class);
+
         if(flight.getCapacity()<bookingRequest.getSelectedSeats()){
             throw new SeatsUnvailableException("NO.SEATS.AVAILABLE");
         }
