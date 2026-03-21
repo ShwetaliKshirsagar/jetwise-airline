@@ -5,7 +5,7 @@ import com.jetwise_airline.user_service.dto.RegisterUser;
 import com.jetwise_airline.user_service.dto.UserResponse;
 import com.jetwise_airline.user_service.service.UserServiceImpl;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +15,9 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("api/users")
+@RequiredArgsConstructor
 public class UserController {
-    @Autowired
-    private UserServiceImpl userService;
+    private final UserServiceImpl userService;
 
     @PostMapping("/register")
     public ResponseEntity<UserResponse> registerUser(@Valid @RequestBody RegisterUser registerUser){
@@ -31,8 +31,8 @@ public class UserController {
    }
     @GetMapping("/validateToken")
     public ResponseEntity<Map<String, Object>> validateToken(@RequestBody Map<String, String> request) {
-        String token = request.get("token");
-        Map<String, Object> response = new HashMap<>();
+//        String token = request.get("token");
+//        Map<String, Object> response = new HashMap<>();
 
 //        try {
 //            String username = jwtService.extractUsername(token);

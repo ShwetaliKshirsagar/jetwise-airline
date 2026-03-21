@@ -4,7 +4,7 @@ import com.itextpdf.text.DocumentException;
 import com.jetwise_airline.booking_service.dto.BookingPaymentResponse;
 import com.jetwise_airline.booking_service.dto.BookingRequest;
 import com.jetwise_airline.booking_service.service.BookingServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,10 +14,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/booking")
+@RequiredArgsConstructor
 public class BookingController {
 
-    @Autowired
-    private BookingServiceImpl bookingService;
+
+    private final BookingServiceImpl bookingService;
     @PostMapping("create")
     public ResponseEntity<String> createBooking(@RequestBody BookingRequest bookingRequest) {
         bookingService.createBooking(bookingRequest);

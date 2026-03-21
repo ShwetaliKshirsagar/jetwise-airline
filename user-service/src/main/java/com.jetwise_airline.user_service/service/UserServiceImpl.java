@@ -9,8 +9,8 @@ import com.jetwise_airline.user_service.enums.Role;
 import com.jetwise_airline.user_service.exceptions.InvalidCredentialsException;
 import com.jetwise_airline.user_service.exceptions.UserAlreadyExistsException;
 import com.jetwise_airline.user_service.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -19,20 +19,12 @@ import java.util.Optional;
 
 
 @Service
-
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-    @Autowired
-    private JWTService jwtService;
-    @Autowired
-    private ModelMapper modelMapper;
-
-    @Autowired
-    private UserRepository userRepository;
-
-    public UserServiceImpl() {
-    }
+    private final PasswordEncoder passwordEncoder;
+    private final JWTService jwtService;
+    private final ModelMapper modelMapper;
+    private final UserRepository userRepository;
 
     @Override
     public UserResponse register(RegisterUser registerUser) throws UserAlreadyExistsException {

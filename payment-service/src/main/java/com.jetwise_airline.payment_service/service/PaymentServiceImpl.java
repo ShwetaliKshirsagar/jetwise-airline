@@ -5,7 +5,7 @@ import com.jetwise_airline.payment_service.dto.PaymentRequestDTO;
 import com.jetwise_airline.payment_service.entity.Payment;
 import com.jetwise_airline.payment_service.repository.PaymentRepository;
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -14,14 +14,12 @@ import java.util.List;
 
 @Service
 @Transactional
+@RequiredArgsConstructor
 public class PaymentServiceImpl implements PaymentService{
-    @Autowired
-    private PaymentRepository paymentRepository;
-    @Autowired
-    private BookingClient bookingClient;
+    private final PaymentRepository paymentRepository;
+    private final BookingClient bookingClient;
     @Override
     public String processPayment(PaymentRequestDTO request) {
-
 
         boolean success = Math.random() > 0.2; // 80% success rate
 

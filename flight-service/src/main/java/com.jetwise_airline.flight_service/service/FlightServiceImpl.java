@@ -1,26 +1,24 @@
 package com.jetwise_airline.flight_service.service;
 
-import com.jetwise_airline.flight_service.dto.FlightBookingResponse;
 import com.jetwise_airline.flight_service.dto.FlightRequestDTO;
 import com.jetwise_airline.flight_service.dto.FlightResponseDTO;
 import com.jetwise_airline.flight_service.entity.FlightEntity;
 import com.jetwise_airline.flight_service.exceptions.FlightAlreadyExists;
 import com.jetwise_airline.flight_service.exceptions.FlightNotFoundException;
 import com.jetwise_airline.flight_service.repository.FlightRepository;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class FlightServiceImpl implements FlightService {
-    @Autowired
-    private FlightRepository flightRepository;
+    private final FlightRepository flightRepository;
+    private final ModelMapper modelMapper;
 
-    @Autowired
-    private ModelMapper modelMapper;
     @Override
     public void addFlight(FlightRequestDTO flightRequest) throws FlightAlreadyExists {
       if(flightRepository.findByFlightNumber(flightRequest.getFlightNumber()).isPresent()){
@@ -37,7 +35,6 @@ public class FlightServiceImpl implements FlightService {
         if(existingFlight.isEmpty()){
             throw new FlightNotFoundException("FLIGHT.NOT.FOUND");
         }
-
 
         //Update route only if not null and Changed
         if(flightRequest.getSource()!= null && !flightRequest.getSource().equals(existingFlight.get().getSource())){
@@ -76,9 +73,7 @@ public class FlightServiceImpl implements FlightService {
     public void deleteFlight(String flightNumber) throws FlightNotFoundException {
         FlightEntity flightEntity = flightRepository.findByFlightNumber(flightNumber).
                 orElseThrow(() -> new FlightNotFoundException("FLIGHT.NOT.FOUND"));
-        if(Optional.of(flightEntity).isPresent()){
-            flightRepository.deleteById( flightEntity.getId());
-        }
+        flightRepository.deleteById(flightEntity.getId());
     }
 
     @Override
@@ -86,10 +81,9 @@ public class FlightServiceImpl implements FlightService {
         List<FlightEntity> availableFlights = flightRepository.findBySourceAndDestination(source, destination)
                 .orElseThrow(() -> new FlightNotFoundException("FLIGHT.NOT.FOUND"));
 
-        List<FlightResponseDTO> flightResponseDTOList = availableFlights.stream()
+        return availableFlights.stream()
                 .map(flight->modelMapper.map(flight,FlightResponseDTO.class))
                 .toList();
-        return flightResponseDTOList;
     }
 
     @Override

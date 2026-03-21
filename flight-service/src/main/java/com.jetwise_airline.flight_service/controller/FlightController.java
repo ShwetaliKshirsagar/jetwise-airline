@@ -1,23 +1,21 @@
 package com.jetwise_airline.flight_service.controller;
 
-import com.jetwise_airline.flight_service.dto.FlightBookingResponse;
 import com.jetwise_airline.flight_service.dto.FlightRequestDTO;
 import com.jetwise_airline.flight_service.dto.FlightResponseDTO;
 import com.jetwise_airline.flight_service.service.FlightServiceImpl;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/flights")
+@RequiredArgsConstructor
 public class FlightController {
-    @Autowired
-    private FlightServiceImpl flightService;
+    private final FlightServiceImpl flightService;
 
     //Add Flight
     @PostMapping("add")
