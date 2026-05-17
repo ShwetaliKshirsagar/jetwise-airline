@@ -1,6 +1,6 @@
 #Jetwise Airline - Microservices Project
 Jetwise Airline is a Spring Boot microservices project designed for learning and real-world simulation.
-It demonstrates concepts like role-based access, service segregation, database integration, validation, exception handling, JWT authentication, scheduled jobs, asynchronous processing, and cloud-native features.
+It demonstrates concepts like role-based access, service segregation, database integration, validation, exception handling, JWT authentication, scheduled jobs, asynchronous processing, caching using hazelcast and cloud-native features.
 ---
 
 ## Services Overview
@@ -102,14 +102,14 @@ Build Tool: Maven
 | DTO-based request/response mapping using ModelMapper | Completed   |
 | Logging with SLF4J + AOP                             | In Progress |
 | JWT Authentication for secure communication          | In Progress |
-| Scheduled Jobs for pending bookings                  | In Progress |
-| Asynchronous PDF/email generation                    | In Progress |
-| Dockerized microservices with Docker Compose         | Planned     |
-| API Gateway + Eureka Discovery                       | Planned     |
+| Scheduled Jobs for pending bookings                  | Completed   |
+| Asynchronous PDF/email generation                    | Completed   |
+| Dockerized microservices with Docker Compose         | Completed   |
+| API Gateway + Eureka Discovery                       | Completed   |
 | Unit & Integration Testing with JUnit5               | Partial     |
 | Kafka Events                                         | Planned     |
 | Swagger API Docs                                     | Planned     |
-
+| Hazelcast for caching                                | Planned     |
 
 
 ##  Architecture & Design
