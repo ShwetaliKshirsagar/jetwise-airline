@@ -27,7 +27,7 @@ public class FlightController {
 
     // Update Flight
     @PutMapping("update")
-//    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')"
     public ResponseEntity<FlightResponseDTO> updateFlight(@RequestBody @Valid FlightRequestDTO flightRequest)
             throws Exception {
         FlightResponseDTO updated = flightService.updateFlight(flightRequest);
@@ -51,6 +51,7 @@ public class FlightController {
         return ResponseEntity.ok(flights);
     }
     //Get flight details for booking, generate ticket
+
     @GetMapping("getFlight/{flightId}")
     public ResponseEntity<FlightResponseDTO> getFlightById(
           @PathVariable long flightId) {

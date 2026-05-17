@@ -8,8 +8,12 @@ import com.jetwise_airline.flight_service.exceptions.FlightNotFoundException;
 import com.jetwise_airline.flight_service.repository.FlightRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import java.lang.management.ThreadInfo;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +33,7 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
+    @CachePut(value = "getFlightCache",key = "#flightRequest.flightNumber")
     public FlightResponseDTO updateFlight(FlightRequestDTO flightRequest) throws FlightNotFoundException {
 
         Optional<FlightEntity> existingFlight = flightRepository.findByFlightNumber(flightRequest.getFlightNumber());
@@ -70,6 +75,7 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
+    @CacheEvict(value = "getFlightCache",key = "#flightNumber")
     public void deleteFlight(String flightNumber) throws FlightNotFoundException {
         FlightEntity flightEntity = flightRepository.findByFlightNumber(flightNumber).
                 orElseThrow(() -> new FlightNotFoundException("FLIGHT.NOT.FOUND"));
@@ -87,7 +93,13 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
+    @Cacheable(value="getFlightCache" ,key = "#flightId")
     public FlightResponseDTO getFlightById(Long flightId) throws FlightNotFoundException {
+        //Added thread sleep for cache testing.
+        try {
+            Thread.sleep(5000);
+        }catch (InterruptedException e){
+        }
         FlightEntity flightEntity = flightRepository.findById(flightId)
                 .orElseThrow(() -> new FlightNotFoundException("FLIGHT.NOT.FOUND"));
         return modelMapper.map(flightEntity, FlightResponseDTO.class);

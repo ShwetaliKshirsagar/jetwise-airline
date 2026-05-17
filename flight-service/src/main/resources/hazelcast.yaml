@@ -1,0 +1,28 @@
+hazelcast:
+  cluster-name: flight-service
+
+  network:
+    port:
+      port: 5701
+      auto-increment: true
+
+    join:
+      multicast:
+        enabled: false
+
+      tcp-ip:
+        enabled: true
+        member-list:
+          - 127.0.0.1
+
+  map:
+    flightCache:
+      time-to-live-seconds: 3600
+      max-idle-seconds: 300
+      eviction:
+        eviction-policy: LRU
+        max-size-policy: PER_NODE
+        size: 1000
+
+  management-center:
+    scripting-enabled: false
