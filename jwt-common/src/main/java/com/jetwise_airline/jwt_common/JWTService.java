@@ -27,8 +27,9 @@ public class JWTService {
         return Keys.hmacShaKeyFor(secret.getBytes());
     }
 
-    public String generateToken(String username) {
+    public String generateToken(String username,String role) {
         Map<String, Object> claims = new HashMap<>();
+//        claims.put("roles",roles);
 
         return Jwts.builder()
                 .setClaims(claims)
@@ -51,15 +52,14 @@ public class JWTService {
         return extractAllClaims(token).getSubject();
     }
 
-    public List<String> getRoles(String token) {
-        Object rolesClaim = extractAllClaims(token).get("roles");
-        if (rolesClaim instanceof List<?> roleList) {
-            return roleList.stream()
-                    .map(Object::toString)
-                    .map(r -> "ROLE_" + r)
-                    .collect(Collectors.toList());
+    public String getRole(String token) {
+
+        Object role = extractAllClaims(token).get("role");
+        if (role != null) {
+            return "ROLE_" + role.toString();
         }
-        return List.of();
+
+        return null;
     }
 
     public boolean isTokenValid(String token) {

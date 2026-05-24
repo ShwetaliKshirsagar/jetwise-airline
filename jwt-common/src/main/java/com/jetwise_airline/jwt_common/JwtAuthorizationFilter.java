@@ -24,17 +24,25 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
         if (header != null && header.startsWith("Bearer ")) {
 
             String token = header.substring(7);
+
+            // Validate token
+            if (!jwtService.isTokenValid(token)) {
+                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                response.getWriter().write("Invalid or Expired JWT Token");
+                return;
+            }
+
             boolean tokenValid = jwtService.isTokenValid(token);
-            List<SimpleGrantedAuthority> authorities  = jwtService.getRoles(token)
-                    .stream()
-                    .map(r -> new SimpleGrantedAuthority(r))
-                    .toList();
-            UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(jwtService.extractUsername(token), null, authorities);
+            String role = jwtService.getRole(token);
+            SimpleGrantedAuthority authority = new SimpleGrantedAuthority(role);
+
+            UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(jwtService.extractUsername(token), null, List.of(authority));
             SecurityContextHolder.getContext().setAuthentication(auth);
 
         }
         filterChain.doFilter(request, response);
     }
+
 
 
 

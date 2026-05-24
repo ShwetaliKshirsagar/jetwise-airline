@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
         }
         UserEntity newUser = modelMapper.map(registerUser, UserEntity.class);
         newUser.setRole(Role.USER);
-
+        newUser.setPassword(passwordEncoder.encode((CharSequence) registerUser.getPassword()));
         UserEntity savedUser = userRepository.save(newUser);
         return modelMapper.map(savedUser, UserResponse.class);
     }
@@ -46,9 +46,9 @@ public class UserServiceImpl implements UserService {
             throw new UsernameNotFoundException("PLEASE.REGISTER");
         } else if (!passwordEncoder.matches(loginUser.getPassword(), userEntity.get().getPassword())) {
             throw new InvalidCredentialsException("INVALID.CREDENTIALS");
-        } else {
-            return jwtService.generateToken(loginUser.getUserName());
 
+        } else {
+            return jwtService.generateToken(loginUser.getUserName(), String.valueOf(userEntity.get().getRole()));
         }
 
     }

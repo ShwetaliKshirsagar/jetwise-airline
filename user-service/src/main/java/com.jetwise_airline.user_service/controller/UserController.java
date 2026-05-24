@@ -24,27 +24,9 @@ public class UserController {
         UserResponse registeredUser = userService.register(registerUser);
         return new ResponseEntity<>(registeredUser, HttpStatus.CREATED);
     }
-    @GetMapping("/login")
+    @PostMapping("/login")
    public ResponseEntity<String> login(@RequestBody LoginUser loginUser) {
        String generatedToken = userService.login(loginUser);
        return new ResponseEntity<>(generatedToken, HttpStatus.OK);
    }
-    @GetMapping("/validateToken")
-    public ResponseEntity<Map<String, Object>> validateToken(@RequestBody Map<String, String> request) {
-//        String token = request.get("token");
-//        Map<String, Object> response = new HashMap<>();
-
-//        try {
-//            String username = jwtService.extractUsername(token);
-//            boolean isValid = jwtService.isTokenValid(token, username);
-//
-//            response.put("valid", isValid);
-//            response.put("username", username);
-//            return ResponseEntity.ok(response);
-//
-//        } catch (Exception e) {
-//            response.put("valid", false);
-//            response.put("error", "Invalid or expired token");
-            return null;        }
-
-    }
+}
