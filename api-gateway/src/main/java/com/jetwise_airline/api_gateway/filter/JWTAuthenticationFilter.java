@@ -27,7 +27,9 @@ import reactor.core.publisher.Mono;
             if (path.contains("/login")
                     || path.contains("/register")
                     || path.contains("/swagger-ui")
-                    || path.contains("/v3/api-docs")) {
+                    || path.contains("/swagger-config")
+                    || path.contains("/webjars")
+                    || path.contains("/v3/api-docs")){
 
                 return chain.filter(exchange);
             }
@@ -45,11 +47,11 @@ import reactor.core.publisher.Mono;
             }
 
             String token = authHeader.substring(7);
-
+            System.out.println("token: "+ token);
             try {
 
-                if (!jwtService.isTokenValid(token)) {
-
+                if (!jwtService.isTokenValid(token)){
+                    System.out.println("istokenValid: "+ jwtService.isTokenValid(token));
                     exchange.getResponse()
                             .setStatusCode(HttpStatus.UNAUTHORIZED);
 

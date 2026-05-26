@@ -3,6 +3,7 @@ package com.jetwise_airline.flight_service.controller;
 import com.jetwise_airline.flight_service.dto.FlightRequestDTO;
 import com.jetwise_airline.flight_service.dto.FlightResponseDTO;
 import com.jetwise_airline.flight_service.service.FlightServiceImpl;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/flights")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearerAuth")
 public class FlightController {
     private final FlightServiceImpl flightService;
 
