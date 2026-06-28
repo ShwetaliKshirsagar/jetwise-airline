@@ -95,21 +95,21 @@ Build Tool: Maven
 
 | Feature                                              | Status      |
 | ---------------------------------------------------- | ----------- |
-| Role-based access (USER, ADMIN)                      | In Progress |
+| Role-based access (USER, ADMIN)                      | Completed   |
 | Validation & Custom Exceptions                       | Completed   |
 | Centralized Exception Handling (`@ControllerAdvice`) | Completed   |
 | Database Integration with JPA & MySQL                | Completed   |
 | DTO-based request/response mapping using ModelMapper | Completed   |
 | Logging with SLF4J + AOP                             | In Progress |
-| JWT Authentication for secure communication          | In Progress |
+| JWT Authentication for secure communication          | Completed   |
 | Scheduled Jobs for pending bookings                  | Completed   |
 | Asynchronous PDF/email generation                    | Completed   |
 | Dockerized microservices with Docker Compose         | Completed   |
 | API Gateway + Eureka Discovery                       | Completed   |
 | Unit & Integration Testing with JUnit5               | Partial     |
 | Kafka Events                                         | Planned     |
-| Swagger API Docs                                     | Planned     |
-| Hazelcast for caching                                | Planned     |
+| Swagger API Docs                                     | Completed   |
+| Hazelcast for caching                                | In Progress |
 
 
 ##  Architecture & Design
